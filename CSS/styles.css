@@ -1,0 +1,289 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.link {
+  text-decoration: none;
+  display: block;
+}
+.wraper {
+  width: 600px;
+  border: 1px solid rgba(68, 119, 167, 0.5);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgba(135, 206, 235, 0.2);
+  box-shadow: 10px 10px 5px 0px rgba(58, 49, 175, 0.32);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(58, 49, 175, 0.32);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(58, 49, 175, 0.32);
+}
+@media screen and (min-width: 480px) {
+  .wraper {
+    background-color: red;
+} 
+}
+.user-form {
+  display: inline-flex;
+  flex-direction: column;
+  width: 400px;
+}
+.user-form-text {
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: bold;
+  color: teal;
+  margin-bottom: 30px;
+}
+.input-form {
+  width: 100%;
+  height: 30px;
+  border: 1px solid rgba(0, 128, 128, 0.5);
+  /* background-color: rgba(127, 143, 192, 0.3); */
+  padding-left: 5px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.form-box {
+  position: relative;
+}
+.input-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(50%);
+  transition: transform 500ms linear;
+}
+.submit-btn {
+  align-self: center;
+  background-color: teal;
+  padding: 10px 15px;
+  box-shadow: 2px 2px 1px 0px rgba(58, 49, 175, 0.32);
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(58, 49, 175, 0.32);
+  -moz-box-shadow: 1x 1px 1px 0px rgba(58, 49, 175, 0.32);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+.input-form::placeholder {
+  color: rgba(69, 177, 15, 0.9);
+  padding-left: 45px;
+}
+
+.input-form:hover + .input-form-label {
+  color: red;
+  transform: translate(-50px, 50%);
+}
+.input-form:focus + .input-form-label,
+.input-form:not(:placeholder-shown) + .input-form-label {
+  color: red;
+  transform: translate(-50px, 50%);
+}
+.check-box-label {
+  position: relative;
+  padding-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: blueviolet;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+.check-box-icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgb(160, 12, 111);
+  border-radius: 6px;
+}
+.check-box-input:checked + .check-box-icon {
+  background-color: rgb(158, 18, 139);
+  background-image: url(../images/v.svg);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  display: flex;
+  background-position: center;
+}
+.check-box-input {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+.test {
+  position: relative;
+  margin-top: 50px;
+  /* height: 40px; */
+  border: 2px solid red;
+  background-color: hsla(0,0%,0%,.1);
+}
+.products__item-link {
+  background-color: #fff;
+  height: 40px;
+  width: 200px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 10px;
+
+  width: 90%;
+  height: 100px;
+  border-radius: 20px;
+
+  font-size: 20px;
+  /* line-height: 3.5; */
+
+  color: #FFF;
+
+  /* transform: scaleY(0);
+  transform: scaleX(0);
+
+  visibility: hidden; */
+
+
+}
+.products__item-link:hover {
+  color: red;
+}
+.test:hover .overlay {
+ display: block;
+}
+.overlay__list:hover {
+  color: tomato;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  80% {
+    top: 90%;
+  }
+
+  96% {
+    top: 90%;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+.drop {
+  opacity: 1;
+  position: absolute;
+  z-index: 11;
+  left: 10%;
+  top: 10%;
+  width: 24px;
+  height: 32px;
+  background-image: linear-gradient(-1deg, rgba(240, 150, 168, 0.8), rgba(225, 121, 146, 0.1));
+  border-radius: 90%;
+  transform: rotate(-10deg);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* animation-name: drop; */
+}
+
+.drop--1 {
+  animation-duration: 16s;
+  animation-delay: 0ms;
+  left: -2%;
+  top: 6%;
+}
+
+.drop--2 {
+  opacity: 1;
+  animation-duration: 26s;
+  animation-delay: 0ms;
+  left: 92%;
+  top: 10%;
+}
+
+.drop--3 {
+  animation-duration: 12s;
+  animation-delay: 0ms;
+  left: 8%;
+  top: 50%;
+}
+
+.drop--4 {
+  animation-duration: 8s;
+  animation-delay: 10ms;
+  left: 80%;
+  top: 58%;
+}
+
+.drop--5 {
+  animation-duration: 20s;
+  animation-delay: 0ms;
+  left: 58%;
+  top: 54%;
+}
+.modal {
+  position: absolute;
+  display: none;
+ top: 0px;
+  left: 0px;
+  /* bottom: 20px;
+  right: 20px; */
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 128, 128, 0.5);
+
+}
+.button {
+  margin: auto;
+}
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.box {
+  display: inline-block;
+  --r: 90px;
+  width: var(--r);
+  height: var(--r);
+  border-radius: 50%;
+  background: crimson;
+  cursor: pointer;
+/* Измени код под этой строкой */
+transition: .8s border-radius ease, 1000ms background linear,
+1000ms width linear,
+1000ms height linear;
+;
+}
+
+.box:hover {
+  
+  border-radius: 0;
+  width: 100px;
+  height: 100px;
+  background: slateblue;
+}

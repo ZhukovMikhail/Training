@@ -1,0 +1,109 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/styles.css">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/animate.css">
+        <script src="js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+    </head>
+    <body>
+    <div class="wraper wow bounceInDown">
+      <form class="user-form">
+          <p class="user-form-text" >Форма для отправки</p>
+
+        <div class="form-box">
+          <input id="user-name" class="input-form" type="text" name="user-name" required placeholder="Ivan Ivanov" minlength="3">
+            <label for="user-name" class="input-form-label">Имя</label>
+        </div>
+        <div class="form-box">
+          <input id="user-mail" class="input-form" type="email" name="user-email" required placeholder="Ivan@Mail.com">
+            <label for="user-mail" class="input-form-label">Почта</label>
+        </div>
+          <label class="user-gender">Пол
+            <select name="user-gender">
+                <option value="male">мужской</option>
+                <option value="female">женский</option>
+            </select>
+        </label>
+        <label label class="check-box-label">
+          <input class="check-box-input" type="checkbox" name="rules">
+          <span class="check-box-icon"></span>
+          Соглашаюсь справилами
+        </label>
+
+          <button class="submit-btn" type="submit">Отправить</button>
+
+      </form>
+
+    
+    </div>
+    <div class="test wow bounceInRight">
+    <button type="button" class="products__item-link link">
+     Кнопка
+  </button>
+  <div class="overlay">
+    <ul class="overlay__list list">
+        <li class="overlay__item">
+            <a href="#" class="overlay__link link">Strawberry Cream</a>
+        </li>
+        <li class="overlay__item">
+            <a href="#" class="overlay__link link">Blueberry Dream</a>
+        </li>
+        <li class="overlay__item">
+            <a href="#" class="overlay__link link">Cherry-O CheeseCake</a>
+        </li>
+    </ul>
+</div>
+    </div>
+
+    <a href="https://htmlreference.io" title="Справочник тегов">
+      htmlreference.io
+    </a>
+    <div class="modal">
+      <button type="button" class="button">x</button>
+    </div>
+<!--     
+    <div class="drop drop--1"></div>
+    <div class="drop drop--2"></div>
+    <div class="drop drop--3"></div>
+    <div class="drop drop--4"></div>
+    <div class="drop drop--5"></div> -->
+    <h4>Симметричность CSS перехода при <em>hover</em></h4>
+    <div class="border">
+      <div class="box"></div>
+    </div>
+<script>
+  let name
+  let age
+name = prompt('введите свое имя');
+age = prompt('введите свой возраст');
+let mood
+mood = confirm('вы в порядке?');
+if (mood === true) {mood = 'good'} 
+else {mood = 'bad'};
+console.log(mood);
+
+const sameMessage = `My name is ${name}, I'm ${age} years old and I feel ${mood}.`;
+
+alert(sameMessage);
+</script>
+
+<!-- <script>
+'JavaScript is awesome'.toUpperCase();
+
+
+</script> -->
+    </body>
+
+
+
+
+    
+    </html>
