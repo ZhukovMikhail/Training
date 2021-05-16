@@ -31,7 +31,7 @@ li {
 }
 @media screen and (min-width: 480px) {
   .wraper {
-    background-color: red;
+    background-color: rgb(142, 143, 201);
 } 
 }
 .user-form {
