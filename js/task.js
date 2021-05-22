@@ -312,8 +312,8 @@
 //и возвращает новый массив, состоящий из тех элементов, которые присутствуют в обоих исходных массивах.
 
 // function getCommonElements(array1, array2) {
-    // Change code below this line
-//   проверяем входят ли элементы второго масива в первый
+// Change code below this line
+// проверяем входят ли элементы второго масива в первый
 // если входят то пушим их в ноый масив.
 
 // const arr = [];
@@ -381,3 +381,121 @@
 // console.log(filterArray([12, 24, 8, 41, 76], 20));
 // console.log(filterArray([12, 85, 8, 58, 75], 20));
 //=====================================================================================
+
+//=========Задача:чётные числа.====================================================
+// Напиши функцию getEvenNumbers(start, end) которая возвращает массив всех чётных чисел от start до end. 
+// Чётным считается число которое делится на 2 без остатка (10 % 2 === 0).
+//             Тесты
+// Объявлена функция getEvenNumbers(start, end)
+// Вызов функции getEvenNumbers(2, 5) возвращает [2, 4]
+// Вызов функции getEvenNumbers(3, 11) возвращает [4, 6, 8, 10]
+// Вызов функции getEvenNumbers(6, 12) возвращает [6, 8, 10, 12]
+// Вызов функции getEvenNumbers(8, 8) возвращает [8]
+// Вызов функции getEvenNumbers(7, 7) возвращает []
+// Вызов функции getEvenNumbers() со случайными start и end возвращает правильный массив
+
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+// const arr = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {arr.push(i)}
+//   }
+//   return arr;
+//    // Change code above this line
+//  }
+//  console.log(getEvenNumbers(2, 5));
+//  console.log(getEvenNumbers(3, 11));
+//  console.log(getEvenNumbers(6, 12));
+//  console.log(getEvenNumbers(8, 8));
+//  console.log(getEvenNumbers(7, 7));
+//  console.log(getEvenNumbers(15, 39));
+ //=====================================================================================
+
+ //=========Задача: Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
+// возвращала первое число от start до end, которое делится на divisor без остатка не использовала оператор break не использовала переменную number
+ 
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+// // заменим код:
+// // let number;
+// // for (let i = start; i < end; i += 1) {
+// //   if (i % divisor === 0) {
+// //     number = i;
+// //     break;}}
+// // return number;
+// // на код:
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }  
+//   // Change code above this line
+// }
+//=====================================================================================
+
+//========= Задача: функция includes()=================================================
+// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, 
+// есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
+// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
+
+// Тесты
+// Объявлена функция includes(array, value)
+// Вызов includes([1, 2, 3, 4, 5], 3) возвращает true
+// Вызов includes([1, 2, 3, 4, 5], 17) возвращает false
+// Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") возвращает true
+// Вызов includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") возвращает false
+// Вызов includes(["apple", "plum", "pear", "orange"], "plum") возвращает true
+// Вызов includes(["apple", "plum", "pear", "orange"], "kiwi") возвращает false
+// Вызов includes() для случайного массива со случайным value возвращает верный boolean
+// В функции includes используется for, return, но не метод массива includes
+
+// function includes(array, value) {
+
+// for (let i = 0; i < array.length; i += 1) {
+//    if (array[i] === value) {return true};
+// }
+// return false
+// }
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+// console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+// console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+// console.log(includes([1, 2, 4, 45, 87, 100], 45));
+//=====================================================================================
+
+// const array = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"]
+// console.log(array[2]);
+
+
+//========= Задача РЕПЕТА: функция includes()=================================================
+//  * Напиши скрипт который заменяет регистр каждого символа в строке на противоположный.
+//  * Например, если строка «JavaScript», то на выходе должена быть строка «jAVAsCRIPT».
+//  */
+
+const string = 'JavaScript';
+const letters = string.split('');
+let invertedString = '';
+
+console.log(letters);
+
+for (const letter of letters) {
+  console.log(letter);
+
+  // if (letter === letter.toLowerCase()) {
+  //   console.log('Эта буква в нижнем регистре!!! - ', letter);
+
+  //   invertedString += letter.toUpperCase();
+  // } else {
+  //   console.log('Эта буква в верхнет регистре!!! - ', letter);
+  //   invertedString += letter.toLowerCase();
+  // }
+
+  const isEqual = letter === letter.toLowerCase();
+
+  invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+}
+
+console.log('invertedString: ', invertedString);
