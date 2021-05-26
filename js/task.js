@@ -475,14 +475,14 @@
 //  * Например, если строка «JavaScript», то на выходе должена быть строка «jAVAsCRIPT».
 //  */
 
-const string = 'JavaScript';
-const letters = string.split('');
-let invertedString = '';
+// const string = 'JavaScript';
+// const letters = string.split('');
+// let invertedString = '';
 
-console.log(letters);
+// console.log(letters);
 
-for (const letter of letters) {
-  console.log(letter);
+// for (const letter of letters) {
+//   console.log(letter);
 
   // if (letter === letter.toLowerCase()) {
   //   console.log('Эта буква в нижнем регистре!!! - ', letter);
@@ -493,9 +493,63 @@ for (const letter of letters) {
   //   invertedString += letter.toLowerCase();
   // }
 
-  const isEqual = letter === letter.toLowerCase();
+//   const isEqual = letter === letter.toLowerCase();
 
-  invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
-}
+//   invertedString += isEqual ? letter.toUpperCase() : letter.toLowerCase();
+// }
 
-console.log('invertedString: ', invertedString);
+// console.log('invertedString: ', invertedString);
+//=====================================================================================
+
+
+//========================= Модуль 3 Объекты =======================================
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// console.log(hotel.name); // Resort Hotel
+// console.log(hotel['name']); // Resort Hotel
+
+// hotel.name = 'Coastline Resort';
+// console.log(hotel.name); // Coastline Resort
+// console.log(hotel['name']); // Coastline Resort
+
+// hotel['name'] = 'Stardust Hotel';
+// console.log(hotel.name); // Stardust Hotel
+// console.log(hotel['name']); // Stardust Hotel
+
+//========================= Модуль 3 Объекты =======================================
+//========================= ДЗ 3 задача 10/41 =======================================
+// Перебери объект apartment используя цикл for...in и запиши в массив keys все его ключи, а в массив values все значения его свойств.
+
+// Тесты
+// Объявлена переменная apartment
+// Значение переменной apartment это объект
+// Объявлена переменная keys
+// Значение переменной keys это массив ['descr', 'rating', 'price']
+// Объявлена переменная values
+// Значение переменной values это массив ['Просторная квартира в центре', 4, 2153]
+
+const apartment = {
+  descr: 'Spacious apartment in the city centre',
+  rating: 4,
+  price: 2153,
+};
+const keys = [];
+const values = [];
+// Change code below this line
+
+// console.log(Object.keys(apartment))
+// console.log(Object.values(apartment))
+// console.log(Object.entries(apartment))
+
+for(const key in apartment) {
+  keys.push(key)
+  values.push(apartment[key])
+  }
+  
+ 
+  console.log(keys)
+  console.log(values)
