@@ -532,24 +532,87 @@
 // Объявлена переменная values
 // Значение переменной values это массив ['Просторная квартира в центре', 4, 2153]
 
-const apartment = {
-  descr: 'Spacious apartment in the city centre',
-  rating: 4,
-  price: 2153,
-};
-const keys = [];
-const values = [];
-// Change code below this line
+// const apartment = {
+//   descr: 'Spacious apartment in the city centre',
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Change code below this line
 
-// console.log(Object.keys(apartment))
-// console.log(Object.values(apartment))
-// console.log(Object.entries(apartment))
+// // console.log(Object.keys(apartment))
+// // console.log(Object.values(apartment))
+// // console.log(Object.entries(apartment))
 
-for(const key in apartment) {
-  keys.push(key)
-  values.push(apartment[key])
-  }
+// for(const key in apartment) {
+//   keys.push(key)
+//   values.push(apartment[key])
+//   }
   
  
-  console.log(keys)
-  console.log(values)
+//   console.log(keys)
+//   console.log(values)
+//==============================================================================
+//========================Задача 11/41=====================================
+
+  // const keys = [];
+  // const values = [];
+  // const advert = {
+  //   service: 'apt',
+  // };
+  // const apartment = Object.create(advert);
+  // apartment.descr = 'Spacious apartment in the city centre';
+  // apartment.rating = 4;
+  // apartment.price = 2153;
+  
+  // for (const key in apartment) {
+  //   // Change code below this line
+  //   if (apartment.hasOwnProperty(key)){
+  //   keys.push(key);
+  //   values.push(apartment[key]);
+  //     }
+    
+  // }
+  // console.log(values)
+  // console.log(keys)
+  // console.log(advert)
+//==============================================================================
+
+  //========================Задача 11/41=====================================
+
+  // function countProps(object) {
+   
+  //   let propCount = 0;
+  //   const keys = Object.keys(object)
+  //   for (const key of keys) {
+      
+        
+  //       propCount += 1;
+      
+  //   }
+  // console.log(keys)
+  // console.log(propCount)
+  //   return propCount;
+    
+  // }
+  // countProps({})
+  // countProps({ name: "Mango", age: 2 })
+  // countProps({ mail: "poly@mail.com", isOnline: true, score: 500 })
+//==============================================================================
+
+    //========================Задача 11/41=====================================
+
+    function countTotalSalary(salaries) {
+      let totalSalary = 0;
+
+      const allsalaries = Object.values(salaries)
+    for (const salary of allsalaries) {
+      totalSalary += salary
+    }
+
+      return totalSalary;
+    }
+    countTotalSalary({})
+    countTotalSalary({ mango: 100, poly: 150, alfred: 80 })
+    countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 })
